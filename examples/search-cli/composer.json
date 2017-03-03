@@ -1,0 +1,11 @@
+{
+  "require": {
+    "solarium/solarium": "~3.8",
+    "guzzlehttp/guzzle": "~6.0",
+    "guzzlehttp/oauth-subscriber": "~0.3",
+    "cultuurnet/cdb": "^2.1",
+    "2dotstwice/uitdatabank-search-api-solarium": "~0.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

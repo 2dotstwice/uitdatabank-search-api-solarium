@@ -1,2 +1,5 @@
-/vendor
 /build
+/composer.lock
+/examples/*/composer.lock
+/examples/*/vendor
+/vendor
