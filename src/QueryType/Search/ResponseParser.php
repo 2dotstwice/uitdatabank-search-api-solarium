@@ -5,7 +5,6 @@ namespace TwoDotsTwice\UiTDBSearchSolarium\QueryType\Search;
 use CultureFeed_Cdb_Default;
 use SimpleXMLElement;
 use Solarium\Core\Query\ResponseParserInterface;
-use Solarium\QueryType\Select\Result\Document;
 
 class ResponseParser implements ResponseParserInterface
 {
@@ -30,7 +29,7 @@ class ResponseParser implements ResponseParserInterface
                 $data['documents'][] = new Document(
                     [
                         'type' => $type,
-                        'item' => $cdbItem
+                        'item' => $cdbItem,
                     ]
                 );
             }

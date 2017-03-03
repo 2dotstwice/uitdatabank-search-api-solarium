@@ -9,6 +9,7 @@ class Query extends BaseQuery
     protected $options = [
       'handler'        => 'search',
       'resultclass'    => Result::class,
+      'documentclass'  => Document::class,
       'query'          => '*:*',
       'start'          => 0,
       'rows'           => 10,
