@@ -3,6 +3,7 @@
 namespace TwoDotsTwice\UiTDBSearchSolarium\QueryType\Search;
 
 use Solarium\QueryType\Select\Query\Query as BaseQuery;
+use TwoDotsTwice\UiTDBSearchSolarium\QueryType\Search\Component\FacetSet;
 
 class Query extends BaseQuery
 {
@@ -15,6 +16,10 @@ class Query extends BaseQuery
       'rows'           => 10,
       'cdbxml_version' => '3.3',
     ];
+
+    protected $componentTypes = array(
+      self::COMPONENT_FACETSET          => FacetSet::class,
+    );
 
     protected $group;
 
