@@ -35,6 +35,18 @@ class ResponseParser implements ResponseParserInterface
             }
         }
 
+        $components = [];
+        /** @var Query $query */
+        $query = $result->getQuery();
+        foreach ($query->getComponents() as $component) {
+            $componentParser = $component->getResponseParser();
+            if ($componentParser) {
+                $components[$component->getType()] = $componentParser->parse($query, $component, $xml);
+            }
+        }
+
+        $data['components'] = $components;
+
         return $data;
     }
 }
